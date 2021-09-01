@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display a map on a webpage</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibGV0bWlsZW5lIiwiYSI6ImNrcTE1YmsxOTA2cXMyd3FzdXd1bGF0N2sifQ.d4IPs9RTJyMj9q2D6r6egQ';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/letmilene/ckt0sx5280bq918k1n5xzqqra', // style URL
+        center: [-45.288486, -23.602287], // starting position [lng, lat]
+        zoom: 8.83 // starting zoom
+    });
+</script>
+
+</body>
+</html>
